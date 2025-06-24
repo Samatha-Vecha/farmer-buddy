@@ -1,4 +1,4 @@
-# 🌾 Fertilizer Recommendation System
+# 🌾 Fertilizer And Crop Recommendation System
 
 A web application that recommends the most suitable fertilizer based on soil and environmental conditions using machine learning. It uses a **React frontend**, a **Flask backend**, and multiple ML models like **Random Forest**, **Gaussian Naive Bayes**, and **Decision Tree**.
 
@@ -16,6 +16,9 @@ A web application that recommends the most suitable fertilizer based on soil and
   - Nitrogen, Phosphorus, Potassium (NPK)
   - pH, Rainfall, Temperature
   - Soil Color, Crop
+- 🌽 Crop prediction based on:
+  - Nitrogen, Phosphorus, Potassium (NPK)
+  - pH, Temperature, Humidity, Rainfall
 - 🤖 Models: Random Forest, Gaussian NB, Decision Tree
 - 🔐 Admin authentication with Firebase
 
