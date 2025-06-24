@@ -4,7 +4,7 @@ A web application that recommends the most suitable fertilizer based on soil and
 
 ---
 
-## 📸 Demo & Screenshots
+## 📸 Demo 
 
 🎥 **Demo Video:** [Watch Here](https://drive.google.com/file/d/1zUTg_sezr69i0dw0GlQXDJGE2OcQAdmh/view?usp=sharing)  
 
@@ -50,22 +50,21 @@ Trained using `scikit-learn`, saved using `joblib`.
 git clone https://github.com/Samatha-Vecha/farmer-buddy.git
 cd farmer-buddy
 ```
-## Backend Setup
+# Backend Setup
 
 cd backend
 python -m venv venv
-# Activate virtual environment
-# On Windows:
+## Activate virtual environment
+## On Windows:
 venv\Scripts\activate
-# On Linux/Mac:
+## On Linux/Mac:
 source venv/bin/activate
-
 pip install -r requirements.txt
 
-# Start the Flask server
+## Start the Flask server
 python app.py
 
-## Frontend Setup
+# Frontend Setup
 cd ../client
 npm install
 npm start
