@@ -1,0 +1,150 @@
+.prediction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: transparent;
+  padding: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.prediction-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  padding-top: 4px; /* 🔽 Decreased padding-top */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 950px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+
+h2 {
+  color: #0a0a0a;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ✅ Improved Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* ✅ Ensure Inputs Take Full Width */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  color: #0a0a0a;
+  margin-bottom: 5px;
+}
+
+/* ✅ Adjusted Input Styles */
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+
+/* ✅ Improve Select Field Look */
+select {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  appearance: none; /* Hide default arrow */
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ✅ Center Button on Full Width */
+.predict-btn {
+  background: #28a745;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.predict-btn:hover {
+  background: #218838;
+}
+
+/* ✅ Improve Result & Error Messages */
+.result {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0a0a0a;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 768px) {
+  .form-grid {
+      grid-template-columns: repeat(2, 1fr); /* ✅ Maintain two columns */
+      gap: 12px; /* ✅ Adjusted for better alignment */
+  }
+
+  .prediction-card {
+      padding: 25px;
+      width: 90%; /* ✅ Increased width for better spacing */
+      max-width: 550px; /* ✅ Ensures readability */
+      margin-top: 100px;
+  }
+
+  h2 {
+      font-size: 22px;
+  }
+
+  input, select {
+      font-size: 16px;
+  }
+
+  .predict-btn {
+      font-size: 16px;
+  }
+}
+
+/* ✅ Extra Small Screens */
+@media (max-width: 480px) {
+  .form-grid {
+      grid-template-columns: repeat(1, 1fr); /* ✅ Switch to one column */
+      gap: 10px;
+  }
+
+  .prediction-card {
+      width: 95%; /* ✅ Better fit on small screens */
+      max-width: 450px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+}

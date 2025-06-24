@@ -1,0 +1,139 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Full-page background wrapper */
+.dashboard-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh; /* Full dynamic height for mobile compatibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Background Image with Overlay */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/images/crop-image3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2;
+}
+
+/* Light dark overlay for readability */
+.bg-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+/* Welcome Card */
+.welcome-card {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  backdrop-filter: blur(7px);
+  animation: fadeIn 1.2s ease-in-out;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.welcome-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Typing Animation for Title */
+.welcome-card h2 {
+  font-size: 32px;
+  color: #065f0f;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 5px 0 15px 0;
+  animation: typing 2s steps(30, end) forwards, blinkCursor 1s step-end infinite;
+  border-right: 2px solid #065f0f;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+
+/* Paragraph Styling */
+.welcome-card p {
+  font-size: 18px;
+  color: black;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeInText 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 30px;
+  }
+
+  .welcome-card h2 {
+    font-size: 26px;
+  }
+
+  .welcome-card p {
+    font-size: 16px;
+  }
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 480px) {
+  .dashboard-wrapper {
+    padding: 10px;
+  }
+
+  .welcome-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .welcome-card h2 {
+    font-size: 22px;
+  }
+
+  .welcome-card p {
+    font-size: 14px;
+  }
+}

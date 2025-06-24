@@ -1,0 +1,118 @@
+/* Carousel.css */
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 80px; /* Adjust as needed */
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 30px; /* Space before carousel */
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #333;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 105%;
+  }
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Carousel Section */
+.carousel-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carouselExample {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 60vh; /* Adjust for better fit */
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Carousel Caption (Image Labels) */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-text {
+      font-size: 2rem;
+  }
+
+  .description {
+      font-size: 1rem;
+  }
+
+  .carousel-inner {
+      height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+      font-size: 1.5rem;
+  }
+
+  .description {
+      font-size: 0.9rem;
+  }
+
+  .carousel-inner {
+      height: 40vh;
+  }
+}

@@ -1,0 +1,183 @@
+/* General Navbar Styles */
+#navbar {
+    height: 80px;
+    transition: all 0.5s ease-in-out;
+    z-index: 997;
+    padding: 15px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #db6889, #4ea5ce);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjustments for Medium and Small Screens */
+@media (max-width: 991px) {
+    #navbar {
+        height: 70px;
+        padding: 12px 0;
+    }
+}
+
+/* Reduce margin between navbar and component */
+body {
+    margin-top: 60px;
+}
+
+/* Navbar container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark text */
+    text-decoration: none;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black; /* Dark text */
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.nav-links a:hover, 
+.dropdown-menu a:hover {
+    color: #ffa200; /* Blue on hover */
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Dark icon */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #f8f9fa; /* Light background */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        transition: max-height 0.4s ease-in-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        max-height: 500px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+}
+
+/* Ensure dropdown menus show properly */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    left: auto;
+    background: #ffffff; /* White background */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    min-width: 160px;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Ensure dropdown works on mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: relative;
+        top: 0;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: none;
+    }
+
+    .dropdown-menu.active {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        color: #333; /* Dark text */
+        padding: 8px;
+        display: block;
+        text-align: center;
+        font-size: 14px; /* Decreased font size for mobile */
+    }
+
+    .dropdown-menu a:hover {
+        color: #ffa200;
+        border-radius: 3px;
+    }
+}
+
+/* Dropdown List Items */
+.dropdown-menu li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Ensure text is in a single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+/* Logout Button */
+.logout {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -1,0 +1,199 @@
+/* General about section wrapper */
+.about-section {
+    margin: 40px 0 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    animation: rainbowText 5s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+}
+
+/* Add space below fixed navbar */
+.responsive-margin {
+    padding-top: 800px; /* Default for desktop */
+}
+
+/* Ensure enough top spacing on small devices */
+@media (max-width: 768px) {
+    .responsive-margin {
+        padding-top: 1050px; /* Increased for small screens to avoid overlap */
+    }
+}
+
+/* Title animation style */
+.title-style {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #0A3D62;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    margin-bottom: 20px;
+}
+
+/* Main container */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    margin: 40px auto;
+    padding: 0 30px;
+    max-width: 1200px;
+}
+
+.about-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-container.visible .about-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.about-text {
+    flex: 1;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rainbow text animation */
+@keyframes rainbowText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Carousel styling */
+.carousel {
+    margin: 0 auto 40px;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.carousel-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-img {
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.carousel-item:hover .carousel-img {
+    filter: blur(1.5px);
+    transform: scale(1.02);
+}
+
+/* New glowing green gradient on hover */
+.carousel-item:hover .carousel-content {
+    display: flex;
+    opacity: 1;
+    background: linear-gradient(
+        135deg,
+        rgba(144, 238, 144, 0.4) 0%,   /* Lighter and more transparent */
+        rgba(50, 205, 50, 0.4) 100%
+    );
+    box-shadow: 0 0 20px rgba(144, 238, 144, 0.3); /* Softer glow */
+    backdrop-filter: blur(4px);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Carousel overlay text container */
+.carousel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 20px;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+}
+
+/* Content inside the box */
+.carousel-content-border {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .about-image,
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .about-text {
+        text-align: center;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .title-style {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .about-section {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+}

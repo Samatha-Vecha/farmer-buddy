@@ -1,0 +1,138 @@
+.history-container {
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  margin: 2.5rem 0 1.2rem;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.scroll-btn {
+  background-color: #06407a;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.scroll-btn:hover {
+  background-color: #3075a0;
+}
+
+.history-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px;
+  max-width: 80%;
+}
+
+.history-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  max-width: 240px;
+  padding: 1rem;
+  text-align: left;
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.history-card h4 {
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+.history-card p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .scroll-btn {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .history-list {
+    max-width: 90%;
+  }
+
+  .history-card {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-card {
+    min-width: 180px;
+    padding: 0.7rem;
+  }
+
+  .delete-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
