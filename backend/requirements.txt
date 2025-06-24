@@ -4,7 +4,8 @@ Flask-Cors==5.0.0
 firebase-admin==6.6.0
 
 # ML-related packages
-numpy==1.26.4
+numpy==1.23.5
+gunicorn==21.2.0
 pandas==2.2.2
 scikit-learn==1.5.2
 xgboost==2.1.3
