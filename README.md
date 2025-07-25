@@ -6,7 +6,7 @@ A web application that recommends the most suitable fertilizer based on soil and
 
 ## 📸 Demo 
 
-🎥 **Demo Video:** [Watch Here](https://drive.google.com/file/d/1zUTg_sezr69i0dw0GlQXDJGE2OcQAdmh/view?usp=sharing)  
+🎥 **Demo Video:** [Watch Here](https://drive.google.com/file/d/1MZaH_Xyz9c44OsGn13cH1kqyYE3o56MV/view?usp=sharing)
 
 ---
 
